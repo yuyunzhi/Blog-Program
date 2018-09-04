@@ -1,5 +1,3 @@
-# Blog-Program
-
 # 重新部署余咖咖的个人网站-hexo
 
 这个部署分为三个部分：
@@ -25,11 +23,11 @@
 
 - `npm i`
 
-- `hexo new 开博大吉`，你会看到一个 md 文件的路径
+- `hexo new 开博大吉`，你会看到一个 md 文件的路径 **重新部署可省略该步骤**
 
-- `start xxxxx.md`,编辑这个 md 文件，内容自己想（Ubuntu 系统用 xdg-open xxxxx.md 命令）
+- `start xxxxx.md`,编辑这个 md 文件，内容自己想（Ubuntu 系统用 xdg-open xxxxx.md 命令） **重新部署可省略该步骤**
 
-- `start _config.yml`,编辑网站配置: 
+- `start _config.yml`,编辑网站配置:  **重新部署可省略该步骤**
     - 把第 6 行的 title 改成你想要的名字;
     - 把第 9 行的 author 改成你的大名;
     - 把最后一行的 type 改成 type: git
@@ -38,7 +36,7 @@
 
 - `npm install hexo-deployer-git --save`,安装 git 部署插件
 
-- `hexo deploy`
+- `hexo deploy` **重新部署可省略该步骤**
 
 - 进入「你的用户名.github.io」对应的 repo，打开 GitHub Pages 功能，如果已经打开了，就直接点击预览链接
 
@@ -68,7 +66,7 @@
 
 ## 二、替换文件
 
-- `git clone 本仓库代码`
+- `git clone 本仓库代码` [github地址点这里](https://github.com/yuyunzhi/Blog-Program)
 
 - `进入myBlog目录准备替换文件`
 
@@ -78,7 +76,7 @@
 
 - 进入`themes/hexo-theme-next`文件夹，把里面的内容全部替换，注意：是进入hexo-theme-next后然后替换所有的文件及文件夹！！！
 
-- 在`myBlog`目录下，把剩余的文件都替换就行了
+- 在`myBlog`目录下，把剩余的文件都替换就行了.
 
 - 完成上述内容，就可以直接在新的电脑部署hexo网站。
 
