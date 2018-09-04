@@ -5,7 +5,7 @@ categories: [编程作品集]
 tags: [JavaScript,jQuery]
 ---
 
-<img src="https://i.loli.net/2018/06/25/5b30e5148d971.jpg" width="70%" />
+<img src="https://i.loli.net/2018/06/25/5b30e5148d971.jpg" width="60%" />
 
 
 **关键词：**JavaScript、jQuery
