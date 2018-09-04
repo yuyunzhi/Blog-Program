@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript,AJAX," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="一、我们如何向服务器发送请求？ 用 form 可以发请求，但是会刷新页面或新开页面 用 a 可以发 get 请求，但是也会刷新页面或新开页面 用 img 可以发 get 请求，但是只能以图片的形式展示 用 link 可以发 get 请求，但是只能以 CSS、favicon 的形式展示 用 script 可以发 get 请求，但是只能以脚本的形式运行  那么有没有什么方式，可以使用get、post、">
+<meta name="keywords" content="JavaScript,AJAX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AJAX又是个什么鬼？">
+<meta property="og:url" content="http://yoursite.com/JavaScript/AJAX又是个什么鬼？/index.html">
+<meta property="og:site_name" content="余韵之的个人网站">
+<meta property="og:description" content="一、我们如何向服务器发送请求？ 用 form 可以发请求，但是会刷新页面或新开页面 用 a 可以发 get 请求，但是也会刷新页面或新开页面 用 img 可以发 get 请求，但是只能以图片的形式展示 用 link 可以发 get 请求，但是只能以 CSS、favicon 的形式展示 用 script 可以发 get 请求，但是只能以脚本的形式运行  那么有没有什么方式，可以使用get、post、">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-a0c060f011b32bc1eff4a55ec800c716_hd.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-2e54545e5b49087ba16e0a9a9ef1e416_hd.jpg">
+<meta property="og:updated_time" content="2018-09-04T08:23:34.374Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AJAX又是个什么鬼？">
+<meta name="twitter:description" content="一、我们如何向服务器发送请求？ 用 form 可以发请求，但是会刷新页面或新开页面 用 a 可以发 get 请求，但是也会刷新页面或新开页面 用 img 可以发 get 请求，但是只能以图片的形式展示 用 link 可以发 get 请求，但是只能以 CSS、favicon 的形式展示 用 script 可以发 get 请求，但是只能以脚本的形式运行  那么有没有什么方式，可以使用get、post、">
+<meta name="twitter:image" content="https://pic1.zhimg.com/80/v2-a0c060f011b32bc1eff4a55ec800c716_hd.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/JavaScript/AJAX又是个什么鬼？/"/>
+
+
+
+
+
+  <title>AJAX又是个什么鬼？ | 余韵之的个人网站</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/yuyunzhi" target="_blank">
+        <img class="xxx" style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">余韵之的个人网站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">这是编程的世界~</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/JavaScript/AJAX又是个什么鬼？/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="余咖咖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="余韵之的个人网站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">AJAX又是个什么鬼？</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T15:53:38+08:00">
+                2018-09-04
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T16:23:34+08:00">
+                2018-09-04
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="一、我们如何向服务器发送请求？"><a href="#一、我们如何向服务器发送请求？" class="headerlink" title="一、我们如何向服务器发送请求？"></a>一、我们如何向服务器发送请求？</h1><ul>
+<li>用 form 可以发请求，但是会刷新页面或新开页面</li>
+<li>用 a 可以发 get 请求，但是也会刷新页面或新开页面</li>
+<li>用 img 可以发 get 请求，但是只能以图片的形式展示</li>
+<li>用 link 可以发 get 请求，但是只能以 CSS、favicon 的形式展示</li>
+<li>用 script 可以发 get 请求，但是只能以脚本的形式运行</li>
+</ul>
+<p>那么有没有什么方式，可以使用get、post、put、delete 请求都行，并且用任意的方式返回给浏览器展示？</p>
+<p>当然有，<strong>这个就是AJAX。</strong></p>
+<h1 id="二、什么是AJAX？"><a href="#二、什么是AJAX？" class="headerlink" title="二、什么是AJAX？"></a>二、什么是AJAX？</h1><p>Jesse James Garrett 讲同时满足以下技术取名叫做AJAX:异步的 <strong>JavaScript 和 XML</strong>。</p>
+<ul>
+<li>使用 XMLHttpRequest 发请求</li>
+<li>服务器返回 XML 格式的字符串</li>
+<li>JS 解析 XML，并更新局部页面</li>
+</ul>
+<p><strong>如何使用XMLHttpRequest？</strong></p>
+<p>JS文件代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">myButton.addEventListener(&apos;click&apos;, (e)=&gt;&#123;</span><br><span class="line">    let request = new XMLHttpRequest()</span><br><span class="line">    request.open(&apos;get&apos;, &apos;/xxx&apos;) // 配置request，请求方式和路径</span><br><span class="line">    request.onreadystatechange = ()=&gt;&#123;</span><br><span class="line">        if(request.readyState===4)&#123;  //当请求相应完毕，执行以下代码</span><br><span class="line">            if(request.status &gt;= 200 &amp;&amp; request.status &lt; 300)&#123;  //判断状态码</span><br><span class="line">                let string = request.responseText    </span><br><span class="line">                // 把符合 JSON 语法的字符串,转换成 JS 对应的值</span><br><span class="line">                let object = window.JSON.parse(string)  </span><br><span class="line">                // JSON.parse 是浏览器提供的</span><br><span class="line">                console.log(typeof object)//得到的值为object类型</span><br><span class="line">                console.log(object)   // 得到后端返回字符串转成符合JSON语法的对象</span><br><span class="line">                console.log(object.note.from) //得到余咖咖</span><br><span class="line">             &#125;else if(request.status &gt;= 400)&#123;</span><br><span class="line">                console.log(&apos;说明请求失败&apos;) </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    request.send()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>解释：</strong></p>
+<ul>
+<li>当点击按钮的时候发送请求，请求过程从2开始</li>
+<li>初始化new XMLHttpRequest()</li>
+<li>配置request的请求方式和路径</li>
+<li>获取readyState的值，并判断是否完成</li>
+<li>判断状态码是否是请求成功</li>
+<li>把返回的JSON语法的字符串转化成JS对应的值</li>
+</ul>
+<p>其中，4里的readyState参考下图，或搜MDN查询<br><img src="https://pic1.zhimg.com/80/v2-a0c060f011b32bc1eff4a55ec800c716_hd.jpg" width="70%"></p>
+<p>其中，6里的JSON语法：<br><img src="https://pic1.zhimg.com/80/v2-2e54545e5b49087ba16e0a9a9ef1e416_hd.jpg" width="70%"></p>
+<p>JSON是一门语言，可在该网站学习：<a href="http://json.org/" target="_blank" rel="noopener">JSON官网</a></p>
+<p>后端代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">else if(path === &apos;/xxx&apos;)&#123;</span><br><span class="line">    response.statusCode = 200</span><br><span class="line">    response.setHeader(&apos;Content-Type&apos;, &apos;text/xml;charset=utf-8&apos;)</span><br><span class="line"> //response.setHeader(&apos;Access-Control-Allow-Origin&apos;, &apos;请求方地址&apos;)</span><br><span class="line">    response.write(`</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;note&quot;:&#123;</span><br><span class="line">        &quot;to&quot;: &quot;xxx&quot;,</span><br><span class="line">        &quot;from&quot;: &quot;余咖咖&quot;,</span><br><span class="line">        &quot;heading&quot;: &quot;很高兴认识你&quot;,</span><br><span class="line">        &quot;content&quot;: &quot;hi&quot;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    `)</span><br><span class="line">    response.end()</span><br></pre></td></tr></table></figure></p>
+<h1 id="三、什么是同源策略？"><a href="#三、什么是同源策略？" class="headerlink" title="三、什么是同源策略？"></a>三、什么是同源策略？</h1><p>同源策略要求 <strong>协议+端口+域名</strong> 一模一样才允许发 AJAX 请求。<br>举例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://xxx.com 可以向 http://www.xxx.com 发 AJAX 请求吗 no</span><br><span class="line">http://xxx.com:80 可以向 http://xxx.com:81 发 AJAX 请求吗 no</span><br></pre></td></tr></table></figure></p>
+<p><strong>为什么要有同源策略？</strong></p>
+<p>如果没有同源策略，就可以直接用POST、GET等向其他网站发送请求得到响应。任何一个网站都可以读取你的余额，直接进行支付转账，获取你写的私密信息，那么在互联网上就没有隐私安全了。</p>
+<p>所以对浏览器要保证：</p>
+<p>只有 <strong>协议+端口+域名</strong> 一模一样才允许发 AJAX 请求。</p>
+<h1 id="四、突破同源策略-跨域"><a href="#四、突破同源策略-跨域" class="headerlink" title="四、突破同源策略===跨域"></a>四、突破同源策略===跨域</h1><p>假如A网站用ajax想给B网站发送请求并得到响应，那怎么办？即不同的域名要互相访问（请求方frank，访问响应方jack）。</p>
+<p>用 <strong>CORS，全称是”跨域资源共享”</strong>（Cross-origin resource sharing）。它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。</p>
+<p>Jack在服务器加上这一段话：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.setHeader(&apos;Access-Control-Allow-Origin&apos;, &apos;frank的地址&apos;)</span><br></pre></td></tr></table></figure>
+<p>告诉服务器，frank是我朋友，不用阻止了。</p>
+<p><strong>那CORS与JSONP的区别在哪？</strong></p>
+<p>CORS与JSONP的使用目的相同，但是比JSONP更强大。</p>
+<p>JSONP只支持GET请求，CORS支持所有类型的HTTP请求。JSONP的优势在于支持老式浏览器，以及可以向不支持CORS的网站请求数据。</p>
+<h1 id="五、一个问题"><a href="#五、一个问题" class="headerlink" title="五、一个问题"></a>五、一个问题</h1><ul>
+<li>请用原生JS手写一个AJAX</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">let request = new XMLHttpRequest()</span><br><span class="line">    request.open(&apos;get&apos;, &apos;/xxx&apos;) </span><br><span class="line">    request.onreadystatechange = ()=&gt;&#123;</span><br><span class="line">        if(request.readyState===4)&#123; </span><br><span class="line">            if(request.status &gt;= 200 &amp;&amp; request.status &lt; 300)&#123; </span><br><span class="line">                console.log(&apos;说明请求成功了&apos;) </span><br><span class="line">                let string = request.responseText    </span><br><span class="line">                let object = window.JSON.parse(string)  </span><br><span class="line">             &#125;  &#125;else if(request.status &gt;= 400)&#123;</span><br><span class="line">                console.log(&apos;说明请求失败&apos;) </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    request.send()</span><br></pre></td></tr></table></figure>
+<p>over~</p>
+
+           
+    </div>
+
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束啦，感谢您的阅读------</div>
+    
+</div>
+      
+    </div>
+
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/qrcode_for_gh_7f7c3c01bd63_860.jpg" alt="余咖咖 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您关注我的个人微信公众号~</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/AJAX/" rel="tag"># AJAX</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/JavaScript/自己动手封装一个AJAX函数/" rel="next" title="自己动手封装一个AJAX函数">
+                <i class="fa fa-chevron-left"></i> 自己动手封装一个AJAX函数
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+
+  
+  
+  
+  
+  </article>
+
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="余咖咖" />
+            
+              <p class="site-author-name" itemprop="name">余咖咖</p>
+              <p class="site-description motion-element" itemprop="description">做一个有理想的程序员</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yuyunzhi" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:lambert1129@foxmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/lambert1129" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/yu-yun-zhi-36/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.yuyunzhi.xyz/resume" title="余咖咖的个人简历" target="_blank">余咖咖的个人简历</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/home.html" title="阮一峰网站" target="_blank">阮一峰网站</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、我们如何向服务器发送请求？"><span class="nav-text">一、我们如何向服务器发送请求？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、什么是AJAX？"><span class="nav-text">二、什么是AJAX？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、什么是同源策略？"><span class="nav-text">三、什么是同源策略？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、突破同源策略-跨域"><span class="nav-text">四、突破同源策略===跨域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、一个问题"><span class="nav-text">五、一个问题</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="powered-by">
+<span id="busuanzi_container_site_uv">
+    本站总访问量<span id="busuanzi_value_site_uv"></span>次
+</span>
+</div>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">余咖咖</span>
+
+  
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">博客全站字数&#58;</span>
+    
+    <span title="博客全站字数"></span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

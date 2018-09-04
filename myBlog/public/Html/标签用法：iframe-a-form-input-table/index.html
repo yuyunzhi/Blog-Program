@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Html," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="iframe与a标签嵌套：12&amp;lt;iframe name=&amp;quot;xxx&amp;quot; src=&amp;quot;http://baidu.com&amp;quot; frameborder=&amp;quot;1&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;lt;a target=&amp;quot;xxx&amp;quot; href=&amp;quot;http://qq.com&amp;quot;&amp;gt;qq&amp;lt;/a&amp;gt;">
+<meta name="keywords" content="Html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="标签用法：iframe a form input table">
+<meta property="og:url" content="http://yoursite.com/Html/标签用法：iframe-a-form-input-table/index.html">
+<meta property="og:site_name" content="余韵之的个人网站">
+<meta property="og:description" content="iframe与a标签嵌套：12&amp;lt;iframe name=&amp;quot;xxx&amp;quot; src=&amp;quot;http://baidu.com&amp;quot; frameborder=&amp;quot;1&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;lt;a target=&amp;quot;xxx&amp;quot; href=&amp;quot;http://qq.com&amp;quot;&amp;gt;qq&amp;lt;/a&amp;gt;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-04T08:36:20.412Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="标签用法：iframe a form input table">
+<meta name="twitter:description" content="iframe与a标签嵌套：12&amp;lt;iframe name=&amp;quot;xxx&amp;quot; src=&amp;quot;http://baidu.com&amp;quot; frameborder=&amp;quot;1&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;lt;a target=&amp;quot;xxx&amp;quot; href=&amp;quot;http://qq.com&amp;quot;&amp;gt;qq&amp;lt;/a&amp;gt;">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/Html/标签用法：iframe-a-form-input-table/"/>
+
+
+
+
+
+  <title>标签用法：iframe a form input table | 余韵之的个人网站</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/yuyunzhi" target="_blank">
+        <img class="xxx" style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">余韵之的个人网站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">这是编程的世界~</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Html/标签用法：iframe-a-form-input-table/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="余咖咖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="余韵之的个人网站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">标签用法：iframe a form input table</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T14:42:46+08:00">
+                2018-09-04
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T16:36:20+08:00">
+                2018-09-04
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Html/" itemprop="url" rel="index">
+                    <span itemprop="name">Html</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="iframe与a标签嵌套："><a href="#iframe与a标签嵌套：" class="headerlink" title="iframe与a标签嵌套："></a>iframe与a标签嵌套：</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe name=&quot;xxx&quot; src=&quot;http://baidu.com&quot; frameborder=&quot;1&quot;&gt;&lt;/iframe&gt;</span><br><span class="line">&lt;a target=&quot;xxx&quot; href=&quot;http://qq.com&quot;&gt;qq&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p><strong><strong>解释：</strong></strong><br>1、默认打开情况，iframe打开的是百度页面；<br>2、iframe标签的name为xxx，与a标签target为xxx向对应结合使用，那么点击a标签，打开的是QQ页面；<br>3、frameborder不写的话会有一个默认border，往往不写的话比较难看；</p>
+<h1 id="一、a标签（get请求）"><a href="#一、a标签（get请求）" class="headerlink" title="一、a标签（get请求）"></a>一、a标签（get请求）</h1><h2 id="1、可以写一个跳转链接："><a href="#1、可以写一个跳转链接：" class="headerlink" title="1、可以写一个跳转链接："></a>1、可以写一个跳转链接：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;a target=&quot;xxx&quot; href=&quot;http://qq.com&quot;target=&quot;_blank&quot;&gt;qq&lt;/a&gt;</span><br><span class="line">&lt;a target=&quot;xxx&quot; href=&quot;http://qq.com&quot;target=&quot;_self&quot;&gt;qq&lt;/a&gt;</span><br><span class="line">&lt;a target=&quot;xxx&quot; href=&quot;http://qq.com&quot;target=&quot;_parent&quot;&gt;qq&lt;/a&gt;</span><br><span class="line">&lt;a target=&quot;xxx&quot; href=&quot;http://qq.com&quot;target=&quot;_top&quot;&gt;qq&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>在HTML中target目标的四个参数的用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">target=&quot;_blank&quot;表示：将链接的画面内容，在新的浏览视窗中打开。打开新窗口；</span><br><span class="line">target=&quot;_self&quot;表示：在自己的窗口打开。如果被iframe 嵌套，这在当前这个iframe窗口打开，而不是当前浏览器窗口；</span><br><span class="line">target=&quot;_parent&quot;表示：将链接的画面内容，当成文件的上一个画面。即：当父窗口打开。</span><br><span class="line">target=&quot;_top&quot;表示：将框架中链接的画面内容，显示在没有框架的视窗中（即除去了框架)。即：顶端打开窗口。</span><br></pre></td></tr></table></figure></p>
+<h2 id="2、点击a标签下载文件"><a href="#2、点击a标签下载文件" class="headerlink" title="2、点击a标签下载文件"></a>2、点击a标签下载文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a  href=&quot;http://qq.com&quot; download&gt;下载&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="3、a标签的href到底可以写什么？"><a href="#3、a标签的href到底可以写什么？" class="headerlink" title="3、a标签的href到底可以写什么？"></a>3、a标签的href到底可以写什么？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">href=&quot;xxx.html&quot;    //就会跳到: 当前地址/xxx.html</span><br><span class="line">href=&quot;？name=qqq&quot;  //就会跳到: 当前地址/？name=qqq</span><br><span class="line">href=&quot;javascript:alert(1);&quot;  //点击执行javascript内容</span><br><span class="line">href=&quot;javascript: ;&quot;     //点击后什么也不做的a标签-伪协议</span><br><span class="line">href=&quot;#&quot;     //页面会回到头部</span><br></pre></td></tr></table></figure>
+<h1 id="二、form标签（post请求）"><a href="#二、form标签（post请求）" class="headerlink" title="二、form标签（post请求）"></a>二、form标签（post请求）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;users&quot; method=&quot;post&quot;&gt;</span><br><span class="line">    &lt;label for=&quot;yyy&quot;&gt;用户名&lt;/label&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot; name=&quot;账号&quot; id=&quot;yyy&quot;&gt;</span><br><span class="line">    &lt;label&gt;密码&lt;input type=&quot;password&quot; name=&quot;密码&quot; &gt;&lt;/label&gt;</span><br><span class="line">    &lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>解释：</strong><br>1、form表单里面的input的type没有submit属性，就无法提交；<br>2、label标签的for=yyy 与 input标签的id=yyy 同时出现，点击文字就能聚焦到输入框，或用label套input也行；</p>
+<p>get默认会把参数出现在查询参数上；<br>post会把参数放入请求的第四部分；<br>我们不能让get请求出现在第四部分；<br>post可以把参数出现在查询参数，在action=”users/use?name=1”;</p>
+<h1 id="三、input标签type属性"><a href="#三、input标签type属性" class="headerlink" title="三、input标签type属性"></a>三、input标签type属性</h1><h2 id="1、能否提交button和submit"><a href="#1、能否提交button和submit" class="headerlink" title="1、能否提交button和submit?"></a>1、能否提交button和submit?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;</span><br><span class="line">&lt;button&gt;按钮&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>解释：</strong>两者都可以提交</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button type=&quot;button&quot;&gt;按钮&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>解释：</strong>不能提交</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button type=&quot;submit&quot;&gt;按钮&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>解释：</strong>可以提交</p>
+<p>总结，button没有写type会自动升级为type=”submit”使得可以提交。</p>
+<h2 id="2、多选框-type-“checkbox”-name分组"><a href="#2、多选框-type-“checkbox”-name分组" class="headerlink" title="2、多选框 type=“checkbox” name分组"></a>2、多选框 type=“checkbox” name分组</h2><p>喜欢的水果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;fruit&quot; value=&quot;1&quot;&gt; 苹果 &lt;/label&gt;</span><br><span class="line">&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;fruit&quot; value=&quot;2&quot;&gt; 香蕉 &lt;/label&gt;</span><br><span class="line">&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;fruit&quot; value=&quot;3&quot;&gt; 哈密瓜 &lt;/label&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="3、单选框-type-“radio”-及-name分组"><a href="#3、单选框-type-“radio”-及-name分组" class="headerlink" title="3、单选框 type=“radio” 及 name分组"></a>3、单选框 type=“radio” 及 name分组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;cool&quot; value=&quot;yes&quot;&gt; yes &lt;/label&gt;</span><br><span class="line">&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;cool&quot; value=&quot;no&quot;&gt; no &lt;/label&gt;</span><br><span class="line">&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;cool&quot; value=&quot;noyes&quot;&gt; noyes &lt;/label&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="4、选择框select"><a href="#4、选择框select" class="headerlink" title="4、选择框select"></a>4、选择框select</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;select name=&quot;group&quot; multiple &gt;</span><br><span class="line">   &lt;option value=&quot;&quot;&gt;-&lt;/option&gt;</span><br><span class="line">   &lt;option value=&quot;1&quot;&gt;第一组&lt;/option&gt;</span><br><span class="line">   &lt;option value=&quot;2&quot;&gt;第二组&lt;/option&gt;</span><br><span class="line">   &lt;option value=&quot;3&quot; disabled&gt;第三组&lt;/option&gt;</span><br><span class="line">   &lt;option value=&quot;4&quot; selected&gt;第四组&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br><span class="line">&lt;button type=&quot;submit&quot;&gt; button&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>解释：</strong><br>默认单选，加了multiple可以多选<br>disabled默认不能选<br>selected默认已经选择了</p>
+<h2 id="5、textarea多行文本"><a href="#5、textarea多行文本" class="headerlink" title="5、textarea多行文本"></a>5、textarea多行文本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea  name=&quot;hobby&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;</span><br></pre></td></tr></table></figure>
+<p>可以增加css属性来调整textarea固定宽高或用cols和rows来定宽高</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">style=&quot;resize:none;width:100px;heigh:100px&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="6、table标签"><a href="#6、table标签" class="headerlink" title="6、table标签"></a>6、table标签</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">   &lt;colgroup&gt;</span><br><span class="line">      &lt;col width=100&gt;</span><br><span class="line">      &lt;col width=200&gt;</span><br><span class="line">   &lt;/colgroup&gt;</span><br><span class="line">   &lt;thead&gt;</span><br><span class="line">      &lt;tr&gt;</span><br><span class="line">         &lt;td&gt;姓名&lt;/td&gt;&lt;td&gt;年龄&lt;/td&gt;</span><br><span class="line">      &lt;/tr&gt;</span><br><span class="line">   &lt;/thead&gt;</span><br><span class="line">   &lt;tbody&gt;</span><br><span class="line">      &lt;tr&gt;</span><br><span class="line">         &lt;td&gt;小红&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;</span><br><span class="line">      &lt;/tr&gt;</span><br><span class="line">      &lt;tr&gt;</span><br><span class="line">         &lt;td&gt;小明&lt;/td&gt;&lt;td&gt;15&lt;/td&gt;</span><br><span class="line">      &lt;/tr&gt;</span><br><span class="line">   &lt;/tbody&gt;</span><br><span class="line">   &lt;tfoot&gt;</span><br><span class="line">      &lt;tr&gt;</span><br><span class="line">         &lt;td&gt;XXX&lt;/td&gt;&lt;td&gt;yyy&lt;/td&gt;</span><br><span class="line">      &lt;/tr&gt;</span><br><span class="line">   &lt;/tfoot&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>解释：</strong><br>1、table标签有三个子元素：thead、tbody、tfoot，顾名思义；即使换了顺序浏览器也一定会按照顺序展示的；<br>2、table标签另一个元素：colgroup来设置每一列的宽度<br>3、tr表示列，td表示数据</p>
+
+           
+    </div>
+
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束啦，感谢您的阅读------</div>
+    
+</div>
+      
+    </div>
+
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/qrcode_for_gh_7f7c3c01bd63_860.jpg" alt="余咖咖 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您关注我的个人微信公众号~</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Html/" rel="tag"># Html</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/HTTP/http请求响应-curl命令用法/" rel="next" title="http请求响应,curl命令用法">
+                <i class="fa fa-chevron-left"></i> http请求响应,curl命令用法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/jQuery/初学jQuery-从封装函数开始/" rel="prev" title="初学jQuery,从封装函数开始">
+                初学jQuery,从封装函数开始 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+
+  
+  
+  
+  
+  </article>
+
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="余咖咖" />
+            
+              <p class="site-author-name" itemprop="name">余咖咖</p>
+              <p class="site-description motion-element" itemprop="description">做一个有理想的程序员</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yuyunzhi" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:lambert1129@foxmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/lambert1129" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/yu-yun-zhi-36/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.yuyunzhi.xyz/resume" title="余咖咖的个人简历" target="_blank">余咖咖的个人简历</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/home.html" title="阮一峰网站" target="_blank">阮一峰网站</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iframe与a标签嵌套："><span class="nav-text">iframe与a标签嵌套：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一、a标签（get请求）"><span class="nav-text">一、a标签（get请求）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、可以写一个跳转链接："><span class="nav-text">1、可以写一个跳转链接：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、点击a标签下载文件"><span class="nav-text">2、点击a标签下载文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、a标签的href到底可以写什么？"><span class="nav-text">3、a标签的href到底可以写什么？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、form标签（post请求）"><span class="nav-text">二、form标签（post请求）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、input标签type属性"><span class="nav-text">三、input标签type属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、能否提交button和submit"><span class="nav-text">1、能否提交button和submit?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、多选框-type-“checkbox”-name分组"><span class="nav-text">2、多选框 type=“checkbox” name分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、单选框-type-“radio”-及-name分组"><span class="nav-text">3、单选框 type=“radio” 及 name分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、选择框select"><span class="nav-text">4、选择框select</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、textarea多行文本"><span class="nav-text">5、textarea多行文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、table标签"><span class="nav-text">6、table标签</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="powered-by">
+<span id="busuanzi_container_site_uv">
+    本站总访问量<span id="busuanzi_value_site_uv"></span>次
+</span>
+</div>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">余咖咖</span>
+
+  
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">博客全站字数&#58;</span>
+    
+    <span title="博客全站字数"></span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

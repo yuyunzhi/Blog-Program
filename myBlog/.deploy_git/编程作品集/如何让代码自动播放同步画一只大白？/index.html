@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript,jQuery,Prism.js,Rem响应式页面,SASS," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="花了一整天的时间画了大白，成就感还是蛮大的。 关键词：JavaScript、jQuery、Prism.js、Rem响应式页面 、SASS 描述：动态向 style 标签和 pre 标签添加文本，绘制出大白的过程。用css3实现动画的效果，用prism.js实现代码高亮的效果，用rem实现响应式布局，用sass进行编译。 源码链接：点这里 预览链接：点这里 一、所需要的知识点1、pre 标签表示预">
+<meta name="keywords" content="JavaScript,jQuery,Prism.js,Rem响应式页面,SASS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何让代码自动播放同步画一只大白？">
+<meta property="og:url" content="http://yoursite.com/编程作品集/如何让代码自动播放同步画一只大白？/index.html">
+<meta property="og:site_name" content="余韵之的个人网站">
+<meta property="og:description" content="花了一整天的时间画了大白，成就感还是蛮大的。 关键词：JavaScript、jQuery、Prism.js、Rem响应式页面 、SASS 描述：动态向 style 标签和 pre 标签添加文本，绘制出大白的过程。用css3实现动画的效果，用prism.js实现代码高亮的效果，用rem实现响应式布局，用sass进行编译。 源码链接：点这里 预览链接：点这里 一、所需要的知识点1、pre 标签表示预">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2018/05/29/5b0ce074dd7bc.png">
+<meta property="og:updated_time" content="2018-09-04T08:34:52.422Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何让代码自动播放同步画一只大白？">
+<meta name="twitter:description" content="花了一整天的时间画了大白，成就感还是蛮大的。 关键词：JavaScript、jQuery、Prism.js、Rem响应式页面 、SASS 描述：动态向 style 标签和 pre 标签添加文本，绘制出大白的过程。用css3实现动画的效果，用prism.js实现代码高亮的效果，用rem实现响应式布局，用sass进行编译。 源码链接：点这里 预览链接：点这里 一、所需要的知识点1、pre 标签表示预">
+<meta name="twitter:image" content="https://i.loli.net/2018/05/29/5b0ce074dd7bc.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/编程作品集/如何让代码自动播放同步画一只大白？/"/>
+
+
+
+
+
+  <title>如何让代码自动播放同步画一只大白？ | 余韵之的个人网站</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/yuyunzhi" target="_blank">
+        <img class="xxx" style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">余韵之的个人网站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">这是编程的世界~</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/编程作品集/如何让代码自动播放同步画一只大白？/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="余咖咖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="余韵之的个人网站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">如何让代码自动播放同步画一只大白？</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T13:58:08+08:00">
+                2018-09-04
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T16:34:52+08:00">
+                2018-09-04
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程作品集/" itemprop="url" rel="index">
+                    <span itemprop="name">编程作品集</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://i.loli.net/2018/05/29/5b0ce074dd7bc.png" width="70%"></p>
+<p>花了一整天的时间画了大白，成就感还是蛮大的。</p>
+<p><strong>关键词：</strong>JavaScript、jQuery、Prism.js、Rem响应式页面 、SASS</p>
+<p><strong>描述：</strong>动态向 style 标签和 pre 标签添加文本，绘制出大白的过程。用css3实现动画的效果，用prism.js实现代码高亮的效果，用rem实现响应式布局，用sass进行编译。</p>
+<p><strong>源码链接：</strong><a href="https://github.com/yuyunzhi/baymax" target="_blank" rel="noopener">点这里</a></p>
+<p><strong>预览链接：</strong><a href="https://yuyunzhi.github.io/baymax/index.html" target="_blank" rel="noopener">点这里</a></p>
+<h1 id="一、所需要的知识点"><a href="#一、所需要的知识点" class="headerlink" title="一、所需要的知识点"></a>一、所需要的知识点</h1><h2 id="1、pre-标签"><a href="#1、pre-标签" class="headerlink" title="1、pre 标签"></a>1、pre 标签</h2><p>表示预定义格式文本。在该元素中的文本通常按照原文件中的编排，以等宽字体的形式展现出来，文本中的空白符（比如空格和换行符）都会显示出来。</p>
+<h2 id="2、API"><a href="#2、API" class="headerlink" title="2、API"></a>2、API</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">styleCode.substring(0,n) //获取字变量styleCode里0-n个字符串</span><br><span class="line">code.scrollTop = 10000 // 窗口向下滚动10000像素</span><br></pre></td></tr></table></figure>
+<h2 id="3、prism-js"><a href="#3、prism-js" class="headerlink" title="3、prism.js"></a>3、prism.js</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var styleCode=`</span><br><span class="line">body&#123;</span><br><span class="line">   background:blue;</span><br><span class="line">&#125;`</span><br><span class="line">code.innerHTML = Prism.highlight(styleCode, Prism.languages.css, &apos;css&apos;);</span><br></pre></td></tr></table></figure>
+<h2 id="4、css画图"><a href="#4、css画图" class="headerlink" title="4、css画图"></a>4、css画图</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">background:linear-gradient</span><br><span class="line">    (135deg, #ffffff 0%,#d2d2d2 100%);   //背景渐变</span><br><span class="line">box-shadow:-0.2rem -0.2rem 0.84rem 0 </span><br><span class="line">    rgb(150, 150, 150) inset;  //内阴影，加上inset</span><br><span class="line">border-radius:0% 0% 50% 30%</span><br><span class="line">    /0% 0% 72% 42%;    //画一个椭圆，斜杠前表示水平半径，后面表示垂直半径</span><br></pre></td></tr></table></figure>
+<p>渐变和阴影用工具网站生成即可，椭圆自己反复的修改到合适为止即可。</p>
+<h2 id="5、加meta-vp"><a href="#5、加meta-vp" class="headerlink" title="5、加meta:vp"></a>5、加meta:vp</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="6、动态rem"><a href="#6、动态rem" class="headerlink" title="6、动态rem"></a>6、动态rem</h2><ul>
+<li>在一个页面图的尺寸，用px（$px）表示：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">height：px(350)  //表示高度为350px</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在js加上一段代码，获取视口宽度并按适当比例赋值给html的font-size</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var pageWidth=window.innerWidth  //获取屏幕宽度</span><br><span class="line">document.documentElement.style.fontSize= `$&#123;pageWidth/60&#125;px`</span><br></pre></td></tr></table></figure>
+<p>我这里用的60倍的放缩。</p>
+<h2 id="7、sass编译"><a href="#7、sass编译" class="headerlink" title="7、sass编译"></a>7、sass编译</h2><ul>
+<li>安装sass</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org/</span><br><span class="line">touch ~/.bashrc</span><br><span class="line">echo &apos;export SASS_BINARY_SITE=&quot;https://npm.taobao.org/mirrors/node-sass&quot;&apos; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br><span class="line">npm i -g node-sass  //全局安装</span><br><span class="line">mkdir ~/Desktop/scss-demo </span><br><span class="line">cd ~/Desktop/scss-demo </span><br><span class="line">mkdir scss css</span><br><span class="line">touch scss/style.scss </span><br><span class="line">start scss/style.scss</span><br><span class="line">node-sass -wr scss -o css //对scss监听，自动编译成css</span><br></pre></td></tr></table></figure>
+<ul>
+<li>将px转化为rem，在scss文件加入以下代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@function px( $px )&#123;</span><br><span class="line">    @return $px/$designWidth*60 + rem;</span><br><span class="line">  &#125;</span><br><span class="line">  $designWidth : 1500;//这是原稿的宽度</span><br></pre></td></tr></table></figure>
+<p>转化一次，就变成rem了，之后在其他不同窗口rem就能生效了。</p>
+<h1 id="二、功能实现"><a href="#二、功能实现" class="headerlink" title="二、功能实现"></a>二、功能实现</h1><h2 id="1、代码自动播放"><a href="#1、代码自动播放" class="headerlink" title="1、代码自动播放"></a>1、代码自动播放</h2><p>创建 style 、 pre 标签，并添加id</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    …</span><br><span class="line">   &lt;style id = &apos;styleTag&apos;&gt;&lt;/style&gt; </span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">   &lt;pre id = &apos;code&apos;&gt;&lt;/pre&gt;//使格式按照打的格式呈现出来</span><br><span class="line">    …</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>在两标签添加css样式内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var styleCode =`abcdefghijklmn`</span><br><span class="line">var n = 0 </span><br><span class="line">var during = 100</span><br><span class="line">var id = setTimeout(function fn()&#123;</span><br><span class="line">    n=n+1 </span><br><span class="line"> //添加显示的内容</span><br><span class="line">    code.innerHTML = styleCode.substring(0,n)</span><br><span class="line"> //添加样式内容</span><br><span class="line">    styleTag.innerHTML = styleCode.substring(0,n)</span><br><span class="line"> if(n &lt; styleCode.length)&#123;</span><br><span class="line">        setTimeout(fn,during)</span><br><span class="line">&#125;,during)</span><br></pre></td></tr></table></figure>
+<p>这里选用了setTimeout，并没有用setInterval，是因为后面我们要加调速功能，setTimeout可以改during，而setInterval只读取一次during。</p>
+<h2 id="2、代码高亮prism-js"><a href="#2、代码高亮prism-js" class="headerlink" title="2、代码高亮prism.js"></a>2、代码高亮prism.js</h2><p>官网地址：<a href="http://prismjs.com/index.html" target="_blank" rel="noopener">prism.js</a></p>
+<ul>
+<li>下载prism的js和css</li>
+<li>分别插入head和body里</li>
+<li>代码引用，并修改成自己需要的样式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// The code snippet you want to highlight, as a string</span><br><span class="line">var code = &quot;var data = 1;&quot;;</span><br><span class="line">// Returns a highlighted HTML string</span><br><span class="line">var html = Prism.highlight(code, Prism.languages.javascript, &apos;javascript&apos;);</span><br></pre></td></tr></table></figure>
+<h2 id="3、调速"><a href="#3、调速" class="headerlink" title="3、调速"></a>3、调速</h2><ul>
+<li>在html创建3个button</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;buttons&quot;&gt;</span><br><span class="line">    &lt;button class=&quot;slow&quot;&gt;慢速&lt;/button&gt;</span><br><span class="line">    &lt;button class=&quot;normal&quot;&gt;正常&lt;/button&gt;</span><br><span class="line">    &lt;button class=&quot;fast&quot;&gt;快速&lt;/button&gt;</span><br><span class="line"> &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>引入jq，并使用事件委托</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var $buttons = $(&quot;.buttons&quot;)</span><br><span class="line">$buttons.on(&apos;click&apos;,&apos;button&apos;,function(e)&#123;</span><br><span class="line">   var $button =$(e.currentTarget)</span><br><span class="line">   var speed = $button.attr(&apos;class&apos;)</span><br><span class="line">   switch(speed)&#123;</span><br><span class="line">     case &apos;slow&apos;:</span><br><span class="line">        during = 100</span><br><span class="line">        break;</span><br><span class="line">     case &apos;normal&apos;:</span><br><span class="line">        during = 30</span><br><span class="line">        break;</span><br><span class="line">     case &apos;fast&apos;:</span><br><span class="line">        during = 1</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>基本上重要的逻辑已经完成了，然后就是不断的调试修改和完善。</p>
+
+           
+    </div>
+
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束啦，感谢您的阅读------</div>
+    
+</div>
+      
+    </div>
+
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/qrcode_for_gh_7f7c3c01bd63_860.jpg" alt="余咖咖 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您关注我的个人微信公众号~</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
+          
+            <a href="/tags/Prism-js/" rel="tag"># Prism.js</a>
+          
+            <a href="/tags/Rem响应式页面/" rel="tag"># Rem响应式页面</a>
+          
+            <a href="/tags/SASS/" rel="tag"># SASS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/编程作品集/如何用原生JS做一个画板？/" rel="next" title="如何用原生JS做一个画板？">
+                <i class="fa fa-chevron-left"></i> 如何用原生JS做一个画板？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/编程作品集/如何用JS做一个自己的导航？/" rel="prev" title="如何用JS做一个自己的导航？">
+                如何用JS做一个自己的导航？ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+
+  
+  
+  
+  
+  </article>
+
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="余咖咖" />
+            
+              <p class="site-author-name" itemprop="name">余咖咖</p>
+              <p class="site-description motion-element" itemprop="description">做一个有理想的程序员</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yuyunzhi" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:lambert1129@foxmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/lambert1129" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/yu-yun-zhi-36/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.yuyunzhi.xyz/resume" title="余咖咖的个人简历" target="_blank">余咖咖的个人简历</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/home.html" title="阮一峰网站" target="_blank">阮一峰网站</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、所需要的知识点"><span class="nav-text">一、所需要的知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、pre-标签"><span class="nav-text">1、pre 标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、API"><span class="nav-text">2、API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、prism-js"><span class="nav-text">3、prism.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、css画图"><span class="nav-text">4、css画图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、加meta-vp"><span class="nav-text">5、加meta:vp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、动态rem"><span class="nav-text">6、动态rem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、sass编译"><span class="nav-text">7、sass编译</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、功能实现"><span class="nav-text">二、功能实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、代码自动播放"><span class="nav-text">1、代码自动播放</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、代码高亮prism-js"><span class="nav-text">2、代码高亮prism.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、调速"><span class="nav-text">3、调速</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="powered-by">
+<span id="busuanzi_container_site_uv">
+    本站总访问量<span id="busuanzi_value_site_uv"></span>次
+</span>
+</div>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">余咖咖</span>
+
+  
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">博客全站字数&#58;</span>
+    
+    <span title="博客全站字数"></span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
