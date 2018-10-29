@@ -131,10 +131,100 @@ v-for="(item,index) in provinceNames" v-bind:key="index"
 
 ## 4、页面状态保存
 
-- 存的到localStorage里
+- 存的到localStorage、sessionStorage里
 - 页面加载是从里面获取渲染页面
 
+## 5、不准确路由跳转404
 
+- 404页面当然是自己准备了
+- 在APP.vue的created里判断路由的name是否存在
+
+```
+  if(this.$route.name===null){
+    this.$router.push({name:'errorPage'})
+  }
+```
+
+- 当然也可以把这个函数写在Vue.protoype里
+
+## 6、路由守卫
+
+- 引用场景，判断某个组件，某个页面用户是否登录来决定是否显示该页面或跳转到登录页面
+- 根据后端传来的登录状态储存到sessionStorage/localStorage
+
+```
+登录成功：true
+登录失败：false
+储存到sessionStorage:window.sessionStorage.setItem('isLogin',true)
+```
+
+- 页面初始化或点击某个组件进行状态判断
+
+```
+Vue.prototype.$initPageLogin=function(){
+  let isLogin=window.sessionStorage.getItem('isLogin');
+  if(isLogin === false || isLogin === null){
+      this.$router.push({name:'onepage'})
+  }
+}
+```
+  
+## 7、打包-懒加载
+
+- 对引入的组件更改为按需加载,会使得打包体积大大降低
+- 原来是这样的：
+
+```
+import xxx from './yyy.vue'
+```
+
+- 懒加载引入
+
+```
+const xxx = ()=>import ('./yyy.vue')
+```
+
+## 8、window.open突破拦截
+
+- 产生原因：非用户点击直接开启新窗口，在异步请求后打开新窗口被拦截
+- 解决方案
+
+1、先打开空白新窗口，异步请求后重定向新窗口
+```
+var xxx=window.open('',_blank)
+xxx.location.href=url
+```
+
+2、把异步请求变成同步请求
+
+-- 异步换成同步写法(本质还是异步，所以不行)
+
+```
+async function r(){
+    try{
+        let content1 = await read('1.txt','utf8');
+        let content2 = await read(content1,'utf8');
+        return content2;
+    }catch(e){ 
+        console.log('err',e)
+    }
+}
+```
+
+-- 用同步的方式发请求(这里使用了jquery ajax)
+
+```
+let data
+$.ajax({
+    url:xxx,
+    async:false， //表示是否异步
+    success(mes){
+        data=mes
+    }
+})
+//后面可以使用data
+然后window.open打开新窗口
+```
 
 # 二、CSS样式
 
