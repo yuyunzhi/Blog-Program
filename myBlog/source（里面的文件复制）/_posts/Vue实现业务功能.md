@@ -266,6 +266,28 @@ $.ajax({
 - 实现响应式的时候，用媒体查询修改最外div的宽度就可以了
 
 
+## 4、解决滚动条抖屏
+
+- 产生原因：不同页面的所用的高度不一样那么超出浏览器高度会显示滚动条，出现样式抖动
+- 解决方案，全局样式加上以下代码(body absoulte)
+
+```
+html {
+    overflow-y: scroll;
+}
+:root {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+:root body {
+    position: absolute;
+}
+body {
+    width: 100vw;
+    overflow: hidden;
+}
+```
+
 # 三、前端库的使用
 
 
